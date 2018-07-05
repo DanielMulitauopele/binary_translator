@@ -32,8 +32,8 @@ class BinaryTranslator
       " " => "000000"
     }
 
-    @binary_to_alpha = {
-      "000001" => "a",
+    @binary_to_alpha =
+      {"000001" => "a",
       "000010" => "b",
       "000011" => "c",
       "000100" => "d",
@@ -44,7 +44,7 @@ class BinaryTranslator
       "001001" => "i",
       "001010" => "j",
       "001011" => "k",
-      "001100" => "l"
+      "001100" => "l",
       "001101" => "m",
       "001110" => "n",
       "001111" => "o",
@@ -72,12 +72,12 @@ class BinaryTranslator
     end
     return binary_array.join
   end
-  # 
-  # def translate_to_text(input)
-  #   letters_array = []
-  #   input_array = input.split(6)
-  #   input_array.each do |element|
-  #     binary_array << @alpha_to_binary[element]
-  #
-  # end
+
+  def translate_to_text(input)
+    letters_array = []
+    input_array = input.split(6)
+    input_array.each do |element|
+      binary_array << @alpha_to_binary[element]
+    end
+  end
 end
